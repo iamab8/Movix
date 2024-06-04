@@ -10,6 +10,8 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
+  --white: #fff;
+  --gray: #C0C0C0;
   --black: #04152d;
   --black2: #041226;
   --black3: #020c1b;
@@ -18,6 +20,7 @@
   --pink: #da2f68;
   --orange: #f89e00;
   --gradient: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
+  --gradient1: linear-gradient(98.37deg, #f5af37 0.99%, #fc3a7b 100%);
 }
 
 * {

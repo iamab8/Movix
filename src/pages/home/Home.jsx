@@ -4,16 +4,22 @@ import Trending from "./trending/Trending";
 import TopRated from "./topRated/TopRated";
 
 import "./style.scss";
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
   return (
-    <div className="homePage">
-      <HeroBanner />
-      <Trending />
-      <Popular />
-      <TopRated />
-      {/* <div style={{ height: 1000 }}></div> */}
-    </div>
+    <>
+      <Header />
+      <div className="homePage">
+        <HeroBanner />
+        <Trending />
+        <Popular />
+        <TopRated />
+        {/* <div style={{ height: 1000 }}></div> */}
+      </div>
+      <Footer />
+    </>
   );
 };
 

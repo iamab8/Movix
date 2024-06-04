@@ -7,6 +7,8 @@ import Similar from "./carousels/Similar";
 import Recommendation from "./carousels/Recommendation";
 
 import "./style.scss";
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 
 const Details = () => {
   const { mediaType, id } = useParams();
@@ -16,17 +18,21 @@ const Details = () => {
   );
 
   return (
-    <div>
-      <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
+    <>
+      <Header />
+      <div>
+        <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
 
-      <Cast data={credits?.cast} loading={creditsLoading} />
+        <Cast data={credits?.cast} loading={creditsLoading} />
 
-      <VideosSection data={data} loading={loading} />
+        <VideosSection data={data} loading={loading} />
 
-      <Similar mediaType={mediaType} id={id} />
+        <Similar mediaType={mediaType} id={id} />
 
-      <Recommendation mediaType={mediaType} id={id} />
-    </div>
+        <Recommendation mediaType={mediaType} id={id} />
+      </div>
+      <Footer />
+    </>
   );
 };
 
